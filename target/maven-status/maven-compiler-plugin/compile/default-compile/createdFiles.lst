@@ -1,2 +1,6 @@
+com/fintrac/springbootwithtsreact/controllers/UserRestController.class
+com/fintrac/springbootwithtsreact/services/UserService.class
 com/fintrac/springbootwithtsreact/SpringBootWithTsReactApplication.class
+com/fintrac/springbootwithtsreact/repositories/UserRepository.class
+com/fintrac/springbootwithtsreact/models/User.class
 com/fintrac/springbootwithtsreact/controllers/ClientForwardController.class

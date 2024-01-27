@@ -5,6 +5,9 @@ HELP.md
 # !**/src/main/**/target/
 # !**/src/test/**/target/
 
+### ENV ###
+.env
+
 ### STS ###
 .apt_generated
 .classpath
