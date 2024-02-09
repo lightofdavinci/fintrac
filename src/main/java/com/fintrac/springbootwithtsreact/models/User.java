@@ -1,5 +1,6 @@
 package com.fintrac.springbootwithtsreact.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.time.LocalDate;
@@ -24,9 +25,9 @@ public class User {
     @NotBlank(message = "The email field cannot be empty")
     @Column(unique=true)
     private String email;
+    @NotBlank(message = "The password field cannot be empty")
     private String password;
     private String token;
-    private String code;
     @Column(columnDefinition = "BOOLEAN DEFAULT false")
     private boolean verified;
     @Column(columnDefinition = "DATE")
@@ -38,9 +39,7 @@ public class User {
     public Long getUser_id() {
         return user_id;
     }
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
-    }
+    public void setUser_id(Long user_id) { this.user_id = user_id; }
     public String getFirst_name() {
         return first_name;
     }
@@ -76,12 +75,6 @@ public class User {
     }
     public void setToken(String token) {
         this.token = token;
-    }
-    public String getCode() {
-        return code;
-    }
-    public void setCode(String code) {
-        this.code = code;
     }
     public boolean getVerified() {
         return verified;
