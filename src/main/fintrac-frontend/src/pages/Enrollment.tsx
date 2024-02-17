@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowLeft } from 'react-bootstrap-icons';
-import enrollmentBg from '../assets/images/enrollment.jpg';
+import { Link, useNavigate } from 'react-router-dom'
+import { ArrowLeft } from 'react-bootstrap-icons'
+import enrollmentBg from '../assets/images/enrollment.jpg'
+import CommonModal from '../components/common/CommonModal'
 import './Enrollment.css'
 
 const Enrollment: React.FC = () => {
@@ -12,6 +13,24 @@ const Enrollment: React.FC = () => {
     email: '',
     password: '',
   });
+  const [showModal, setShowModal] = useState(false);
+  const [modalData, setModalData] = useState({
+    heading: "",
+    title: "",
+    content: ""
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+  const handleCloseModal = () => {
+    setShowModal(false);
+    if (modalData.heading === 'Success!') {
+      navigate('/');
+    }
+  };
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     const { name, value } = e.currentTarget;
@@ -19,25 +38,41 @@ const Enrollment: React.FC = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      if (formData.username && formData.first_name && formData.last_name && formData.email && formData.password) {
-        fetch('/api/user', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
+    e.preventDefault();
+    if (formData.username && formData.first_name && formData.last_name && formData.email && formData.password) {
+      setIsLoading(true);
+      fetch('/api/user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      .then((response) => {
+        if (!response.ok) {
+           throw new Error('Network response was not ok. Status: ' + response.status);
+        }
+        setModalData({
+           heading: 'Success!',
+           title: 'Success details',
+           content: 'User was successfully registered. Please check and verify your email'
         })
-          .then((response) => {
-            console.log(JSON.stringify(response))
-          })
-          .catch((error) => {
-            console.log(JSON.stringify(error))
-          });
-      } else {
-        alert('Please fill in all fields');
-      }
-    };
+        handleShowModal();
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setModalData({
+          heading: 'Failure!',
+          title: 'Failure details',
+          content: error.message
+        })
+        handleShowModal();
+        setIsLoading(false);
+      });
+    } else {
+      alert('Please fill in all fields');
+    }
+  };
 
   return (
     <>
@@ -83,10 +118,11 @@ const Enrollment: React.FC = () => {
               onChange={handleChange}
               type="password" required/><label>Password</label>
           </div>
-          <button className="flex-centered" type="submit">Register</button>
+          <button className="flex-centered" type="submit" disabled={isLoading}>{isLoading ? 'Loading...' : 'Register'}</button>
           <Link to={`/`}>Already Registered User? Click here to login</Link>
         </form>
       </div>
+      <CommonModal show={showModal} onHide={handleCloseModal} heading={modalData.heading} title={modalData.title} content={modalData.content} />
     </>
   )
 }

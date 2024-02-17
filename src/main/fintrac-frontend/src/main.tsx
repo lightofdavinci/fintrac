@@ -6,7 +6,8 @@ import Home from './pages/Home.tsx';
 import Enrollment from './pages/Enrollment.tsx';
 import VerifyEmail from './pages/VerifyEmail.tsx';
 import NotFound from './pages/NotFound.tsx';
-import './assets/styles/main.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/styles/main.css';
 
 const router = createBrowserRouter([
   {
