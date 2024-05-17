@@ -1,8 +1,8 @@
-package com.fintrac.springbootwithtsreact.controller;
+package com.fintrac.springbootwithtsreact.controllers;
 
-import com.fintrac.springbootwithtsreact.model.User;
+import com.fintrac.springbootwithtsreact.models.User;
 import com.fintrac.springbootwithtsreact.dto.RegistrationUserDTO;
-import com.fintrac.springbootwithtsreact.service.UserService;
+import com.fintrac.springbootwithtsreact.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

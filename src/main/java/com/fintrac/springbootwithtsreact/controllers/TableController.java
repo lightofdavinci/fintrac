@@ -1,4 +1,4 @@
-package com.fintrac.springbootwithtsreact.controller;
+package com.fintrac.springbootwithtsreact.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

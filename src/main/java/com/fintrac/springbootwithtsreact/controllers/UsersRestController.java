@@ -1,7 +1,7 @@
-package com.fintrac.springbootwithtsreact.controller;
+package com.fintrac.springbootwithtsreact.controllers;
 
-import com.fintrac.springbootwithtsreact.service.UsersService;
-import com.fintrac.springbootwithtsreact.model.User;
+import com.fintrac.springbootwithtsreact.services.UsersService;
+import com.fintrac.springbootwithtsreact.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.fintrac.springbootwithtsreact.controller;
+package com.fintrac.springbootwithtsreact.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

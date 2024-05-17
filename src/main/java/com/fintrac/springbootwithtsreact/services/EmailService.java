@@ -1,4 +1,4 @@
-package com.fintrac.springbootwithtsreact.service;
+package com.fintrac.springbootwithtsreact.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;

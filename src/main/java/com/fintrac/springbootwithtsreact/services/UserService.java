@@ -1,8 +1,8 @@
-package com.fintrac.springbootwithtsreact.service;
+package com.fintrac.springbootwithtsreact.services;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import com.fintrac.springbootwithtsreact.model.User;
+import com.fintrac.springbootwithtsreact.models.User;
 import com.fintrac.springbootwithtsreact.dto.RegistrationUserDTO;
 import com.fintrac.springbootwithtsreact.repository.UserRepository;
 import com.fintrac.springbootwithtsreact.util.JwtUtil;

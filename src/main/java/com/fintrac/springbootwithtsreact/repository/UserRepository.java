@@ -1,5 +1,5 @@
 package com.fintrac.springbootwithtsreact.repository;
-import com.fintrac.springbootwithtsreact.model.User;
+import com.fintrac.springbootwithtsreact.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

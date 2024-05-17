@@ -1,4 +1,4 @@
-package com.fintrac.springbootwithtsreact.model;
+package com.fintrac.springbootwithtsreact.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

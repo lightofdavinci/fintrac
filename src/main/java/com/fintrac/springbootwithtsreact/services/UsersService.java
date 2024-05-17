@@ -1,7 +1,7 @@
-package com.fintrac.springbootwithtsreact.service;
+package com.fintrac.springbootwithtsreact.services;
 
 import java.util.List;
-import com.fintrac.springbootwithtsreact.model.User;
+import com.fintrac.springbootwithtsreact.models.User;
 import com.fintrac.springbootwithtsreact.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
