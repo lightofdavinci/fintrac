@@ -1,9 +1,10 @@
 import { FC } from 'react'
-
+import { useLocation, Link } from 'react-router-dom';
 import { List, Search, Flag, PersonCircle } from 'react-bootstrap-icons';
 import logo from '../../assets/images/fintrac-logo.png'
 
 const DashboardNav: FC = () => {
+  const location = useLocation();
   return (
     <>
       <div className="dashboard-nav-container">
@@ -21,12 +22,12 @@ const DashboardNav: FC = () => {
           </nav>
           <nav className="dashboard-nav-bottom">
             <ul>
-                <li><a href="#">Accounts</a></li>
-                <li><a href="#">Pay & transfer</a></li>
-                <li><a href="#">Plan & track</a></li>
-                <li><a href="#">Investments</a></li>
-                <li><a href="#">Security & privacy</a></li>
-                <li><a href="#">Explore Products</a></li>
+                <li><Link to="/dashboard" className={location.pathname === "/dashboard" ? "active" : ""}>Accounts<span className="dashboard-nav-arrow-up"></span></Link></li>
+                <li><a href="#">Pay & transfer<span className="dashboard-nav-arrow-up"></span></a></li>
+                <li><a href="#">Plan & track<span className="dashboard-nav-arrow-up"></span></a></li>
+                <li><a href="#">Investments<span className="dashboard-nav-arrow-up"></span></a></li>
+                <li><a href="#">Security & privacy<span className="dashboard-nav-arrow-up"></span></a></li>
+                <li><a href="#">Explore Products<span className="dashboard-nav-arrow-up"></span></a></li>
             </ul>
           </nav>
       </div>

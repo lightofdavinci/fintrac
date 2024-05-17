@@ -31,10 +31,28 @@
   display: flex;
 }
 .dashboard-nav-bottom ul li {
-  margin-right: 3rem;
+  margin-right: 2.2rem;
+  position: relative;
 }
 .dashboard-nav-bottom ul li a {
   color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
+  white-space: nowrap;
+}
+.dashboard-nav-bottom ul li a.active .dashboard-nav-arrow-up {
+  display: inline-block;
+}
+.dashboard-nav-arrow-up {
+  display: none;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid #fff;
 }
