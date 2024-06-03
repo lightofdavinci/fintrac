@@ -5,9 +5,15 @@ com/fintrac/springbootwithtsreact/controllers/UsersRestController.class
 com/fintrac/springbootwithtsreact/dto/RegistrationUserDTO.class
 com/fintrac/springbootwithtsreact/controllers/TableController.class
 com/fintrac/springbootwithtsreact/models/User.class
+com/fintrac/springbootwithtsreact/controllers/AccountRestController.class
 com/fintrac/springbootwithtsreact/services/EmailService.class
+com/fintrac/springbootwithtsreact/services/AccountService.class
 com/fintrac/springbootwithtsreact/controllers/UserRestController.class
 com/fintrac/springbootwithtsreact/services/UserService.class
 com/fintrac/springbootwithtsreact/util/JwtUtil.class
+com/fintrac/springbootwithtsreact/controllers/AuthController.class
+com/fintrac/springbootwithtsreact/services/AuthService.class
 com/fintrac/springbootwithtsreact/services/UsersService.class
+com/fintrac/springbootwithtsreact/models/Account.class
 com/fintrac/springbootwithtsreact/controllers/ClientForwardController.class
+com/fintrac/springbootwithtsreact/repository/AccountRepository.class

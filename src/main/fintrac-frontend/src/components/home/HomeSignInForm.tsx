@@ -1,13 +1,15 @@
 import { FC, FormEvent, useState } from 'react';
-
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ChevronRight } from 'react-bootstrap-icons';
 
 const HomeSignInForm: FC = () => {
+   const navigate = useNavigate();
    const [username, setUsername] = useState('');
    const [password, setPassword] = useState('');
+   const [loading, setLoading] = useState(false);
    const handleSubmit = async (e: FormEvent) => {
       e.preventDefault();
+      setLoading(true);
 
       const response = await fetch('/api/login', {
         method: 'POST',
@@ -15,9 +17,13 @@ const HomeSignInForm: FC = () => {
         body: JSON.stringify({ username, password }),
       });
 
+      setLoading(false);
+
       if (response.ok) {
         const data = await response.json();
         console.log(data);
+        localStorage.setItem('user_id', data.message);
+        navigate('/dashboard');
       } else {
         console.error('Login failed');
       }
@@ -34,7 +40,7 @@ const HomeSignInForm: FC = () => {
           <div className="form-group">
             <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" required/><label>Password</label>
           </div>
-          <button className="flex-centered" type="submit">Sign in</button>
+          <button disabled={loading} className="flex-centered" type="submit">{loading ? 'Loading...' : 'Sign In'}</button>
           <div className="form-link-row">
             <a href="#">Forgot username/password?</a>
             <ChevronRight color="#015ab4" size={14} />
@@ -44,9 +50,6 @@ const HomeSignInForm: FC = () => {
             <ChevronRight color="#015ab4" size={14} />
           </div>
         </form>
-{/*        <button onClick={() => setCount((count) => count + 1)}>
-           count is {count}
-         </button> */}
       </div>
     </>
   )

@@ -1,11 +1,17 @@
+/Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/controllers/AccountRestController.java
+/Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/controllers/AuthController.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/services/UserService.java
+/Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/services/AuthService.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/SpringBootWithTsReactApplication.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/controllers/RedisController.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/controllers/TableController.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/controllers/ClientForwardController.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/util/JwtUtil.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/services/UsersService.java
+/Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/services/AccountService.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/services/EmailService.java
+/Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/models/Account.java
+/Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/repository/AccountRepository.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/repository/UserRepository.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/dto/RegistrationUserDTO.java
 /Users/danvolosnikov/Documents/job/spring-boot-with-ts-react/src/main/java/com/fintrac/springbootwithtsreact/models/User.java
