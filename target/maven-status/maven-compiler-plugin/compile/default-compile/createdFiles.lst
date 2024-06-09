@@ -6,6 +6,7 @@ com/fintrac/springbootwithtsreact/dto/RegistrationUserDTO.class
 com/fintrac/springbootwithtsreact/controllers/TableController.class
 com/fintrac/springbootwithtsreact/models/User.class
 com/fintrac/springbootwithtsreact/controllers/AccountRestController.class
+com/fintrac/springbootwithtsreact/config/SessionConfig.class
 com/fintrac/springbootwithtsreact/services/EmailService.class
 com/fintrac/springbootwithtsreact/services/AccountService.class
 com/fintrac/springbootwithtsreact/controllers/UserRestController.class

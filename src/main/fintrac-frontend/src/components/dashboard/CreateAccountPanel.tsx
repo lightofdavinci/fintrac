@@ -49,14 +49,15 @@ const CreateAccountPanel: React.FC<Props> = ({ toggleCreateAccount }) => {
     if (!accountName) { setError('Please enter account name'); }
     else {
       setError('');
-      fetch('/api/account', {
+      fetch('/api/accounts', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             account_name: accountName,
-            account_type: accountType
+            account_type: accountType,
+            user_id: localStorage.getItem("user_id")
           }),
         })
         .then((response) => {
